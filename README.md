@@ -27,12 +27,15 @@ src/
 │       ├── bkgUser.png
 │       ├── logoUrbanFood.png
 │       └── urban3.png
+│
 ├── context/
 │   ├── AuthContext.tsx
 │   └── useAuthContext.ts
+│
 ├── features/
 │   ├── charts/
 │   │   └── ChartsPage.tsx
+│   │
 │   ├── customers/
 │   │   ├── AddCustomerForm/
 │   │   │   ├── AddCustomerForm.test.tsx
@@ -42,6 +45,7 @@ src/
 │   │   │   └── CustomersPageMobile.tsx
 │   │   ├── Customers.mock.ts
 │   │   └── Customers.types.ts
+│   │
 │   ├── dashboard/
 │   │   ├── cards/
 │   │   │   ├── dashboardData.ts
@@ -50,13 +54,17 @@ src/
 │   │   ├── UserDashboard.tsx
 │   │   ├── AdminDashboard.tsx
 │   │   └── DashboardPage.tsx
+│   │
 │   ├── foodMenu/
 │   │   ├── foodMenuData.ts
 │   │   └── FoodMenuPage.tsx
+│   │
 │   ├── orders/
 │   │   └── OrdersPage.tsx
+│   │
 │   └── services/
 │       └── ServicesPage.tsx
+│
 ├── hocs/
 │   └── components/
 │       ├── mainLayout/
@@ -66,16 +74,20 @@ src/
 │       ├── CompanyLogo.tsx
 │       ├── FullScreenImg.tsx
 │       └── LoginForm.tsx
+│
 ├── packages/
 │   └── firebase/
 │       ├── firebase-auth.ts
 │       └── firebase-config.ts
+│
 ├── routes/
 │   ├── Routing.tsx
 │   └── ProtectedRoute.tsx
+│
 ├── App.tsx
 ├── main.tsx
 └── index.css
+
 
 
 🛠️ Tech Stack
