@@ -5,20 +5,35 @@ It provides an **admin dashboard** for KPIs and data visualization, and a **user
 
 
 ## 🌐 Live Demo
-[Urban Food App Live](https://urban-food.netlify.app)  
+[Urban Food App Live](https://urban-food-prod.netlify.app/)
 
 
 ## 🚀 Getting Started
 
 Follow these steps to run the project locally:
 
-1. **Clone the repository**
-   
-git clone https://github.com/AvadaneiConstantin/urban-food.git
+1. **Download the repository**  
+   Click the green **Code** button and choose **Download ZIP**.
+
+2. **Extract the ZIP file**  
+   Unzip the downloaded archive.
+
+3. **Navigate to project folder**
+
+```bash
 cd urban-food
 
-npm install
-npm run dev
+4.  Install dependencies
+```bash
+   npm install
+
+5. Run the development server
+  ```bash
+   npm run dev
+
+6. Open the app
+Visit http://localhost:5173  -- in your browser.    
+
 
 📂 Project Structure
 ```text
