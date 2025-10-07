@@ -1,20 +1,23 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgb(100, 100, 100);
-  background: rgb(240, 253, 240);
+/* src/index.css  */
+body {
+  /* background: linear-gradient(120deg, #9fc3d3 0%, #e4e9e9 100%); */
+  /* background: linear-gradient(120deg, #dfecf1 0%, #ffffff 100%); */
   margin: 0;
   padding: 0;
 }
 
 .pageTitle {
-  position: absolute;
-  left: 50%;
-  padding: 20px 0;
+  margin: 70px auto 20px auto;
   font-weight: 700;
-  font-size: 2.5rem;
-  color: #244d20;
+  font-size: 2rem;
+  color: #37474f;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Pentru desktop (>=900px) */
+@media (min-width: 900px) {
+  .pageTitle {
+    margin: 30px auto 20px auto;
+  }
 }
