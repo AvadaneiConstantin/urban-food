@@ -6,7 +6,6 @@
 // - Central hub for admin insights & analytics
 
 import { Box, Typography } from "@mui/material";
-import backgroundImg from "../../assets/images/bkgAdmin.jpeg";
 import { KpiGrid } from "./cards/DashboardKpi";
 import {
   OrdersChart,
@@ -23,7 +22,7 @@ export const AdminDashboard = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: `url(${backgroundImg})`,
+        backgroundImage: `url(/MainBckg.jpeg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         overflowX: "hidden",
