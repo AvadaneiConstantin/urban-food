@@ -7,7 +7,7 @@ It provides an **admin dashboard** for KPIs and data visualization, and a **user
 ## 🌐 Live Demo
 [Urban Food App Live](https://urban-food-prod.netlify.app/)
 
-
+```text
 ## 🚀 Getting Started
 
 Follow these steps to run the project locally:
@@ -19,16 +19,12 @@ Follow these steps to run the project locally:
    Unzip the downloaded archive.
 
 3. **Navigate to project folder**
+   cd urban-food
 
-```bash
-cd urban-food
-
-4.  Install dependencies
-```bash
+4. Install dependencies
    npm install
 
 5. Run the development server
-  ```bash
    npm run dev
 
 6. Open the app
@@ -36,13 +32,8 @@ Visit http://localhost:5173  -- in your browser.
 
 
 📂 Project Structure
-```text
+
 src/
-├── assets/
-│   └── images/
-│       ├── bkgUser.png
-│       ├── logoUrbanFood.png
-│       └── urban3.png
 │
 ├── context/
 │   ├── AuthContext.tsx
