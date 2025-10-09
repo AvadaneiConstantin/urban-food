@@ -8,17 +8,17 @@ It provides an **admin dashboard** for KPIs and data visualization, and a **user
 [Urban Food App Live](https://urban-food-prod.netlify.app/)
 
 ```text
-## 🚀 Getting Started
+ 🚀 Getting Started
 
 Follow these steps to run the project locally:
 
-1. **Download the repository**  
+1. Download the repository 
    Click the green **Code** button and choose **Download ZIP**.
 
-2. **Extract the ZIP file**  
+2. Extract the ZIP file  
    Unzip the downloaded archive.
 
-3. **Navigate to project folder**
+3. Navigate to project folder
    cd urban-food
 
 4. Install dependencies
