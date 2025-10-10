@@ -1,10 +1,3 @@
-//  ESLint configuration for TypeScript + React project
-//  - Ignores build output: dist
-//  - Applies recommended rules from: ESLint core, TypeScript, React Hooks, React Refresh
-//  - Targets files: *.ts, *.tsx
-//  - Sets language options: ECMAScript 2020, browser globals
-//  - Designed for Vite + React + TypeScript environment
-
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -16,6 +9,13 @@ export default tseslint.config([
   globalIgnores(["dist"]),
   {
     files: ["**/*.{ts,tsx}"],
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+      project: "./tsconfig.app.json",
+      tsconfigRootDir: __dirname,
+      sourceType: "module",
+      ecmaVersion: 2022,
+    },
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
@@ -23,7 +23,6 @@ export default tseslint.config([
       reactRefresh.configs.vite,
     ],
     languageOptions: {
-      ecmaVersion: 2020,
       globals: globals.browser,
     },
   },
