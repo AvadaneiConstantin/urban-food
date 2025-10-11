@@ -1,7 +1,10 @@
-// tsconfig.node.json
+// tsconfig.node.json - Configuration for Node.js files (e.g., Vite config)
 {
   "compilerOptions": {
+    /* Build Information */
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    /* Language and Environment */
     "target": "ES2023",
     "lib": ["ES2023"],
     "module": "ESNext",
@@ -10,17 +13,19 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": false,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": true, // No output files from tsc
+    "verbatimModuleSyntax": false,
 
-    /* Linting */
+    /* Strictness and Linting (mirrors app config for consistency) */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "erasableSyntaxOnly": true
   },
+
+  // Only include configuration files that run in a Node environment
   "include": ["vite.config.ts"]
 }

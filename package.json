@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest --config jest.base.config.ts",
+    "test:coverage": "jest --config jest.coverage.config.ts",
+    "test:watch": "jest --config jest.base.config.ts --watch",
+    "typescript": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

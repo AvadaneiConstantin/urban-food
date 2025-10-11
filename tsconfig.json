@@ -1,8 +1,13 @@
-// tsconfig.json
+//  Root configuration file
 {
+  // Sets 'files' to an empty array as configuration is split into references
   "files": [],
+
+  // Defines references to the specific configuration files
   "references": [
+    // Configuration for the main application and tests
     { "path": "./tsconfig.app.json" },
+    // Configuration for Node-based tools (like vite.config.ts)
     { "path": "./tsconfig.node.json" }
   ]
 }

@@ -63,7 +63,7 @@ export const LoginForm = ({ onClose, onSuccess }: Props) => {
           <strong>Login with Admin permissions:</strong>
           <br />
           <br />
-          Email: <code>admin@urbanfood.com</code>
+          Email:<code>admin@urbanfood.com</code>
           <br />
           Password: <code>111222</code>
           <br />
