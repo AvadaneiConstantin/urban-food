@@ -11,7 +11,6 @@ on:
   push:
     branches:
       - main # The primary branch
-      - addPipeline # A specific feature branch
 
   # Triggers on every Pull Request targeting the specified branches
   pull_request:
