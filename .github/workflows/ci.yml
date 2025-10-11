@@ -1,35 +1,70 @@
+# ----------------------------------------------------------------------------------
+# CI Pipeline: Continuous Integration Workflow for Node.js/React projects
+# ----------------------------------------------------------------------------------
+
+# Defines the name displayed in the GitHub Actions UI
 name: CI Pipeline
 
+# --- Triggers: When the workflow should run ---
 on:
+  # Triggers on code pushes to the specified branches
   push:
     branches:
-      - main
-      - addPipeline
+      - main # The primary branch
+      - addPipeline # A specific feature branch
+
+  # Triggers on every Pull Request targeting the specified branches
   pull_request:
     branches:
       - main
+
+  # Allows manual execution of the workflow via the GitHub UI
   workflow_dispatch:
 
+# --- Jobs: The sequence of tasks to execute ---
 jobs:
+  # ------------------------------------------------
+  # Job 1: Test - Runs unit and integration tests
+  # ------------------------------------------------
   test:
+    # Specifies the runner environment (latest Ubuntu version)
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Check out the repository code
       - uses: actions/checkout@v4
+
+      # Step 2: Set up the Node.js environment
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "npm"
+          node-version: 20 # Use Node.js version 20
+          cache: "npm" # Cache 'npm' dependencies for faster installs
+
+      # Step 3: Install dependencies (using 'ci' for consistency and speed in CI environments)
       - run: npm ci
+
+      # Step 4: Run the test suite
       - run: npm test
 
+  # ------------------------------------------------
+  # Job 2: Build - Creates the production bundle
+  # ------------------------------------------------
   build:
+    # Ensures this job only runs after the 'test' job has successfully completed
     needs: test
+    # Specifies the runner environment
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Check out the repository code (required for independent steps)
       - uses: actions/checkout@v4
+
+      # Step 2: Set up the Node.js environment
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "npm"
+
+      # Step 3: Install dependencies
       - run: npm ci
+
+      # Step 4: Run the build script (npm run build)
       - run: npm run build

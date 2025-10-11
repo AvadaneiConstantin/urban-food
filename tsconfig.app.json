@@ -1,31 +1,42 @@
-// tsconfig.app.json
+// Configuration for the application source files (used by Vite and Jest)
 {
   "compilerOptions": {
+    /* Build Information */
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    /* Language and Environment */
     "target": "ES2022",
-    "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "jsx": "react-jsx", // Critical: Enables React JSX syntax processing
 
-    /* Bundler mode */
+    /* Module Resolution (Vite/Bundler Mode) */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": false,
     "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+    "noEmit": true, // Prevents TypeScript from outputting compiled JS files (Vite handles bundling)
 
-    /* Linting */
+    /* Path Aliases (Alignment with Jest/Vite) */
+    "baseUrl": ".", // Base directory for resolving non-relative module names
+    "paths": {
+      // Defines the '@/...' alias to map to the 'src' directory.
+      "@/*": ["src/*"]
+    },
+
+    /* Strictness and Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    /* for tests*/
-    "types": ["jest", "@testing-library/jest-dom"]
+    "noImplicitAny": true, // Enforces explicit types where context can't infer them
+    "noUnusedLocals": true, // Warns about unused variables in the local scope
+    "noUnusedParameters": true, // Warns about unused parameters in functions
+    "noFallthroughCasesInSwitch": true, // Enforces breaks in switch cases
+    "noUncheckedSideEffectImports": true, // Ensures all side-effect imports are verified
+    "verbatimModuleSyntax": false, // Retained from original
+    "erasableSyntaxOnly": true, // Retained from original
+    "esModuleInterop": true // Recommended for better interoperability with CJS modules
   },
-  "include": ["src", "lib", "**/*.test.ts", "**/*.test.tsx"]
+
+  // Include application source files and all test files for compilation/type-checking
+  "include": ["src", "**/*.test.ts", "**/*.test.tsx"]
 }
